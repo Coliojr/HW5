@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="main.js"></script>
-
+    
+    
     <title>Travel Log</title>
 </head>
 <body>
@@ -22,15 +22,15 @@
             <div data-role="navbar" data-theme='b'>
                 <ul>
                 <li><a href="#home">Home Page</a></li>
-                <li><a href="#add">Add Page</a></li>
-                <li><a href="#subtract">Subtract Page</a></li>
+                <li><a href="#add">Add Trip</a></li>
+                <li><a href="#edit">Edit Trip</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div>  
        
         <!-- content -->
         <div data-role="content" data-theme='e'>
-            Real application function code
+            <p>Picures and Text</p>
         </div>
         
           <!-- notes footer --> 
@@ -44,7 +44,7 @@
 
     <div data-role="page" id="add">
         
-        <!-- =================================== -->
+        <!-- This page can be used to created a trip object that is baically an array of info that the user enters -->
         <!-- header --> 
         <div data-role="header" data-theme='b'>
             <h2>Travel Log - Add</h2>
@@ -52,8 +52,8 @@
             <div data-role="navbar" data-theme='b'>
                 <ul>
                  <li><a href="#home">Home Page</a></li>
-                 <li><a href="#add">Add Page</a></li>
-                 <li><a href="#subtract">Subtract Page</a></li>
+                 <li><a href="#add">Add Trip</a></li>
+                 <li><a href="#edit">Edit Trip</a></li>
                 </ul>
             </div><!-- /navbar -->
 
@@ -62,7 +62,21 @@
 
         <!-- content -->
         <div data-role="content" data-theme='e'>
-            Real application function code
+            <label for="name">Name:</label>
+            <input type="text" id="name"><br />
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination"><br />
+            <label for="month">Month:</label>
+            <input type="text" id="month"><br />
+            <label for="transportation">Transportation:</label>
+            <input type="text" id="transportation"><br />
+            <label for="numPeople">Number of people in group:</label>
+            <input type="number" id="numPeople"><br />
+            
+            <button type="button" id="buttonAdd">Add Trip to List</button>
+            <button type="button" id="buttonShow">Show Trip Information</button>
+
+            <textarea id="show" rows="5" cols="42"></textarea>
         </div>
         <!-- =================================== -->
 
@@ -72,10 +86,10 @@
         </div>
         <!-- =================================== -->
     </div>
-    
+
     <!-- ======================================================================================== -->
     
-    <div data-role="page" id="subtract">
+    <div data-role="page" id="edit">
         
           <!-- =================================== -->
         <!-- header --> 
@@ -85,8 +99,8 @@
             <div data-role="navbar" data-theme='b'>
                 <ul>
                 <li><a href="#home">Home Page</a></li>
-                <li><a href="#add">Add Page</a></li>
-                <li><a href="#subtract">Subtract Page</a></li>
+                <li><a href="#add">Add Trip</a></li>
+                <li><a href="#edit">Edit Trip</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div>
@@ -95,7 +109,7 @@
 
         <!-- content -->
         <div data-role="content" data-theme='e'>
-            Real application function code
+            <p>Page for editing trips/doing calculations. Anything that will take 15 lines of code lol</p>
         </div>
 
         <!-- =================================== -->
@@ -108,7 +122,8 @@
 
     </div>
      <!-- ======================================================================================== -->
-    
-    
+     
+     <script src="library_trip.js"></script>
+     <script src="main.js"></script>
 </body>
 </html>
